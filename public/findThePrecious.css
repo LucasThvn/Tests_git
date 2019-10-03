@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 45px 150px auto 200px 250px;
+    grid-template-areas:
+            "header header"
+            "banner join"
+            "banner contact"
+            "fellow contact"
+            "fellow footer";
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+h3{
+    font-size: 1.4em;
+}
+
+header {
+    grid-area: header;
+    background-color: #424242;
+}
+
+.main_title a {
+    display: block;
+    text-decoration: none;
+    color: #EEEEEE;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_content {
+    display:inline-block;
+}
+
+.fellows {
+    grid-area: fellow;
+}
+
+.fellows h2 {
+    margin: 30px;
+}
+
+.fellows_content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.wanted_people {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border-style: solid;
+    border-width: 0.15rem;
+    margin: 0 0 30px 0;
+}
+
+.wanted_people h3, .wanted_people p, .dead, .img_center {
+    width: 220px;
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+.dead {
+    position: relative;
+}
+
+.dead_abs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.6);
+}
+
+.reward {
+    position: absolute;
+    background-color: #424242;
+    padding: 10px;
+    top: 40px;
+    left: 0;
+    font-size: 0.9em;
+    color: #EEEEEE;
+}
+
+.join {
+    grid-area: join;
+    margin: auto;
+    width: 80%;
+}
+
+.join_content button, .button button{
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    border-style: none;
+    color: #EEEEEE;
+    font-size: 1.4em;
+    background-color: #2b2b2b;
+}
+
+.join_content button:hover, .button button:hover {
+    background-color: #424242;
+}
+
+.contact {
+    grid-area: contact;
+    background-color: #e7e7e7;
+}
+
+.contact_content h2 {
+    margin: 20px 0 0 0;
+}
+
+.contact_content{
+    width: 80%;
+    margin: auto;
+}
+form {
+    margin: 50px 0;
+}
+
+.form_content {
+    margin: 0 0 20px 0;
+}
+
+.form_content input, .form_content textarea ,.form_content select {
+    width: 100%;
+    border: solid #6b6b6b 0.15rem;
+    padding: 10px;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#msg {
+    height: 150px;
+    margin-top: 30px;
+}
+
+.error_report{
+    padding-top: 10px;
+}
+
+.error_report li{
+    list-style-type: none;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #424242;
+    display: inline-block;
+}
+
+.footer_content {
+    width: 80%;
+    margin: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #CCCCCC;
+    margin-top: 5px;
+
+}
+
+.sauron4ever, .site_plan {
+    display: flex;
+    margin-top: 30px;
+}
+
+ .sauron4ever {
+     flex-direction: column;
+ }
+
+.site_plan {
+    justify-content: space-between;
+}
+
+
+footer li{
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 800px){
+    body {
+        grid-template-columns: 100%;
+        grid-template-rows: 45px 150px 250px auto auto 200px;
+        grid-template-areas:
+                "header"
+                "join"
+                "banner"
+                "fellow"
+                "contact"
+                "footer";
+    }
+
+    .banner_content{
+        display: none;
+    }
+
+}
